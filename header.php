@@ -10,7 +10,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- TYPEKIT / GOOGLE FONTS / FONTS.COM -->
+		<!-- Typography -->
+		<link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Montserrat:100,200,400,600" rel="stylesheet">
 
 		<!-- STYLES ARE ENQUED THROUGH FUNCTIONS.PHP -->
 
@@ -18,3 +19,28 @@
 
 	</head>
 	<body <?php body_class(); ?>>
+
+		<header id="inner-header-wrapper">
+		<figure id="inner-figure">
+			<h1>
+				<a href="index.html"><img src="img/logo.png" alt="John Krummen for Council" class="logo-inner"/></a>
+			</h1>
+		</figure>
+		<button class="btn-inner"><a href="http://www.paypal.com" target="_blank">Contribute</a></button>
+		<div id="sm-top-inner">
+			<a href="http://wwww.facebook.com" target="_blank" class="fb"></a>
+			<a href="http://www.twitter.com" target="_blank" class="tw"></a>
+		</div>
+</header>
+
+<nav class="nav-home-top">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About John</a></li>
+		<li><a href="issues.html">Issues</a></li>
+		<li><a href="news.html">News</a></li>
+		<li class="nav-active">Contact</li>
+	</ul>
+</nav>
+
+<main>
