@@ -120,7 +120,7 @@ button.btn-inner a:hover {
   display: block;
   width: 100px;
   height: 100px;
-  background: url("../img/facebook.svg");
+  background: url("../assets/img/facebook.svg");
   background-repeat: no-repeat;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
