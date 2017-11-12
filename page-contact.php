@@ -10,29 +10,18 @@ get_header(); ?>
          </section>
 
          <section class="inner-main">
-             <form id="contact-form">
-                 Name:<br>
-                 <input type="text" name="fullname">
-                 <br>
-                 Email:<br>
-                 <input type="text" name="email">
-                 <br>
-                 Zip Code:<br>
-                 <input type="text" name="zip">
-                 <br>
-                 Subject:<br>
-                 <input type="text" name="subject">
-                 <br>
-                 Message:<br>
-                 <input type="text" name="zip">
-                 <br><br>
-                 <input class="submit" type="submit" value="Submit">
-             </form>
+
+             <div id="contact-form">
+
+            <?php the_content(); ?>
+
+        </div>
+
          </section>
 
          <section>
              <figure id="logo-2">
-                 <a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" /></a>
+                 <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" /></a>
              </figure>
          </section>
 

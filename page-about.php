@@ -38,7 +38,7 @@ get_header(); ?>
 
          <section>
              <figure id="logo-2">
-                 <a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" /></a>
+                 <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" /></a>
              </figure>
          </section>
 
