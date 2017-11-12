@@ -561,3 +561,74 @@ p#footer {
     padding: 30px 0;
     font-size: 0.8em;
 }
+
+/** Media Queries **/
+
+@media all and (max-width: 687px) {
+  #header-left {
+      display: none;
+  }
+  #mobile-headshot {
+      display: block;
+      width: 75%;
+      margin: auto;
+      margin-bottom: 25px;
+  }
+  #header-right button {
+      margin-bottom: 20px;
+  }
+  .nav-home-top ul {
+      font-size: 0.7em;
+  }
+  #cta-wrapper {
+      display: block;
+  }
+  #for-a-better {
+      display: none;
+  }
+  #naperville {
+      display: none;
+  }
+  #hp-banner img {
+      width: 100%;
+  }
+  .nav-home-bottom {
+      font-size: 0.7em;
+  }
+  .nav-home-top ul li.nav-active {
+      padding: 60px 0;
+  }
+  #inner-banner img {
+      width: 100%;
+  }
+  #inner-banner h4 {
+      display: none;
+  }
+  .inner-main {
+      padding: 15px;
+  }
+  #card-wrapper {
+      display: block;
+  }
+  .issues-wrapper {
+      display: block;
+      padding: 15px;
+  }
+  .widget-right {
+      margin-left: 0;
+  }
+  button.btn-inner {
+      display: none;
+  }
+  #sm-top-inner {
+      display: none;
+  }
+  img.logo-inner {
+      width: 60%;
+      max-width: 300px;
+      display: block;
+      margin: auto;
+      float: none;
+  }
+
+}
