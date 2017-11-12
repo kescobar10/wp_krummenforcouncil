@@ -23,7 +23,7 @@
 		<header id="inner-header-wrapper">
 		<figure id="inner-figure">
 			<h1>
-				<a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" class="logo-inner"/></a>
+				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" class="logo-inner"/></a>
 			</h1>
 		</figure>
 		<button class="btn-inner"><a href="http://www.paypal.com" target="_blank">Contribute</a></button>
@@ -34,13 +34,7 @@
 </header>
 
 <nav class="nav-home-top">
-	<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About John</a></li>
-		<li><a href="issues.html">Issues</a></li>
-		<li><a href="news.html">News</a></li>
-		<li><a href="contact.html">Contact</a></li>
-	</ul>
+	<?php html5blank_nav(); ?>
 </nav>
 
 <main>

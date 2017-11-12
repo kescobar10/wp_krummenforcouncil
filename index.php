@@ -1,19 +1,58 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<section id="inner-banner">
+		  <img src="<?php bloginfo('template_url'); ?>/assets/img/signs.jpg" alt="Naperville" />
+		  <h4><span>News &amp;<span id="naperville">&nbsp;Updates</span></span></h4>
 
-			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
+	  </section>
 
-			<?php get_template_part('partials/loop'); ?>
+	  <section class="inner-main">
 
-			<?php get_template_part('partials/pagination'); ?>
+		  <?php if (have_posts()) : ?>
+			  <div>
+				  <?php while (have_posts()) : the_post();?>
 
-		</section>
-		<!-- /section -->
-	</main>
+			  <time datetime="2017-07-14"><?php echo get_the_date(); ?></time>
+			  <h2><a href="<?php the_permalink(); ?>" class="blog-link"><?php the_title(); ?></a></h2>
+			  <h3 class="category">
 
-<?php get_sidebar(); ?>
+				  <?php
+				  $categories = get_the_category();
+
+				  if ($categories) {
+
+					  $i = 1;
+					  foreach ($categories as $one) {
+						  echo $one->name;
+
+						  if ( count($categories) > 0 && count($categories) > $i ) {
+							  echo ', ';
+						  }
+						  $i++;
+					  }
+
+				  }
+
+				  ?>
+			  </h3>
+			  <p>John is an independent engineering consultant, working with a variety of companies, including multiple Fortune 500 companies. John’s first job out of college was driving corvettes around the GM Proving Grounds. John has published multiple technical papers on advanced engineering topics, and is a patent-holding engineer. John is also a technical project manager, having installed capital equipment at nuclear facilities.</p>
+			  <button class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></button>
+
+		  		<?php endwhile; ?>
+
+  			</div>
+
+  <?php else: ?>
+	  <br>
+	  <h2>No Posts Found</h2>
+	  <?php endif; ?>
+
+	</section>
+
+	  <section>
+		  <figure id="logo-2">
+			  <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" /></a>
+		  </figure>
+	  </section>
 
 <?php get_footer(); ?>

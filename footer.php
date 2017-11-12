@@ -1,11 +1,5 @@
 <nav class="nav-home-bottom">
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About John</a></li>
-                  <li><a href="issues.html">Issues</a></li>
-                  <li><a href="news.html">News</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
+              <?php html5blank_nav(); ?>
           </nav>
 
           <div id="sm-bottom">
@@ -14,12 +8,12 @@
           </div>
 
           <footer>
-              <p id="footer">Paid for by Krummen for Council</p>
+              <p id="footer">Copyright &copy; <?= date('Y'); ?> | Paid for by Krummen for Council</p>
           </footer>
 
       </main>
     <script src="/js/app.js" charset="utf-8"></script>
- 
+
 
 		<?php wp_footer(); ?>
 
