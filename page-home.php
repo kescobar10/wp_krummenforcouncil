@@ -2,7 +2,7 @@
 /*
 Template Name: Home
 */
-get_header(); ?>
+get_header('home'); ?>
 
 <section id="cta-wrapper">
              <article class="call-to-action">
