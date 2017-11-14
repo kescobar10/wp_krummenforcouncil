@@ -12,13 +12,13 @@ get_header('home'); ?>
                  </a>
              </article>
              <article class="call-to-action">
-                 <a href="contact.html" >
+                 <a href="contact" >
                      <h3>Get Updates</h3>
                      <p>and stay in touch</p>
                  </a>
              </article>
              <article class="call-to-action">
-                 <a href="issues.html" >
+                 <a href="issues" >
                      <h3>Learn</h3>
                      <p>about the issues</p>
                  </a>
