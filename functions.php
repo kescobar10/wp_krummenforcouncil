@@ -11,8 +11,15 @@
 
 // Load any external files you have here
 include (TEMPLATEPATH . '/functions/acf.php' );
-include (TEMPLATEPATHn . '/functions/shortcodes.php' );
+include (TEMPLATEPATH . '/functions/shortcodes.php' );
 include (TEMPLATEPATH . '/functions/custom-post-types.php' );
+//
+// add_shortcode('contentheading', 'heading_shortcode');
+// 
+// function heading_shortcode($atts, $content = null)
+// {
+//     return '<h3>' . do_shortcode($content) . '</h3>'; // do_shortcode allows for nested Shortcodes
+// }
 
 
 /*------------------------------------*\

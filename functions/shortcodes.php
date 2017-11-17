@@ -1,6 +1,6 @@
 <?php
 // Shortcodes
-add_shortcode('heading', 'heading_shortcode'); // You can place [html5_shortcode_demo] in Pages, Posts now.
+add_shortcode('contentheading', 'heading_shortcode'); // You can place [html5_shortcode_demo] in Pages, Posts now.
 // add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
