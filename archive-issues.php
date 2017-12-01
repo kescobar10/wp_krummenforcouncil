@@ -21,7 +21,7 @@ get_header(); ?>
 
                 <div>
 
-                <h2>Learn About the Issues</h2>
+                <h2 class="inner-header">Learn about the issues</h2>
                 <?php while (have_posts()) : the_post();?>
 
 
@@ -35,7 +35,7 @@ get_header(); ?>
                     </div>
 
         </section>
-    
+
 
 
 
