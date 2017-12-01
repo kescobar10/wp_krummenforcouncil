@@ -1,16 +1,31 @@
 <div class="comments">
-	<?php if (post_password_required()) : ?>
-	<p><?php _e( 'Post is password protected. Enter the password to view any comments.', 'html5blank' ); ?></p>
+
+<!-- comment form -->
+
+<?php $fields = array(
+	'author' => '<input id="author" placeholder="Name" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" />',
+	'email' => '<input id="email" name="email" placeholder="Email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" />'
+);
+$args = array(
+	'fields' => apply_filters( 'comment_form_default_fields', $fields )
+);
+comment_form($args); ?>
+
 </div>
 
-	<?php return; endif; ?>
+<!-- display comments -->
 
-<?php if (have_comments()) : ?>
 
-	<h2><?php comments_number(); ?></h2>
 
-	<ul>
-		<?php wp_list_comments('type=comment&callback=html5blankcomments'); // Custom callback in functions.php ?>
+	<ul class="comment-box">
+		<?php if (have_comments()) : ?>
+
+			<h2><?php comments_number(); ?></h2>
+		<?php wp_list_comments(array(
+			'avatar_size' => '100',
+		    'type' => 'comment',
+		    'callback' => 'ahha_comments'
+		)); ?>
 	</ul>
 
 <?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
@@ -19,6 +34,5 @@
 
 <?php endif; ?>
 
-<?php comment_form(); ?>
 
 </div>
