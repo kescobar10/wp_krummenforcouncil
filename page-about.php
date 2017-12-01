@@ -10,6 +10,7 @@ get_header(); ?>
          </section>
 
          <section class="inner-main">
+             <h2 class="inner-header"><?php the_field('page_title'); ?></h2>
              <?php the_content(); ?>
          </section>
 

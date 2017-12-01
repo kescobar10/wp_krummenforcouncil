@@ -5,22 +5,23 @@ Template Name: Home
 get_header('home'); ?>
 
 <section id="cta-wrapper">
+
              <article class="call-to-action">
-                 <a href="http://www.paypal.com" target="_blank" >
-                     <h3>Contribute</h3>
-                     <p>to the campaign</p>
+                 <a href="<?php the_field('left_link'); ?>" target="_blank" >
+                     <h3 class="red-card"><?php the_field('left_line_1'); ?></h3>
+                     <p><?php the_field('left_line_2'); ?></p>
                  </a>
              </article>
              <article class="call-to-action">
-                 <a href="contact" >
-                     <h3>Get Updates</h3>
-                     <p>and stay in touch</p>
+                 <a href="<?php the_field('center_link'); ?>" >
+                     <h3 class="red-card"><?php the_field('center_line_1'); ?></h3>
+                     <p><?php the_field('center_line_2'); ?></p>
                  </a>
              </article>
              <article class="call-to-action">
-                 <a href="issues" >
-                     <h3>Learn</h3>
-                     <p>about the issues</p>
+                 <a href="<?php the_field('right_link'); ?>" >
+                     <h3 class="red-card"><?php the_field('right_line_1'); ?></h3>
+                     <p><?php the_field('right_line_2'); ?></p>
                  </a>
              </article>
          </section>
