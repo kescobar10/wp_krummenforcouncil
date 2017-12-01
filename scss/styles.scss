@@ -618,6 +618,15 @@ p#footer {
     font-size: 0.8em;
 }
 
+#footer a {
+    color: $pale;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    color: $sand;
+}
+
 
 /** Comments **/
 

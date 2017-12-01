@@ -644,6 +644,15 @@ p#footer {
   font-size: 0.8em;
 }
 
+#footer a {
+  color: #efecda;
+}
+
+#footer a:hover {
+  text-decoration: none;
+  color: #e3dec0;
+}
+
 /** Comments **/
 input#comment-submit {
   background-color: #e3001a;

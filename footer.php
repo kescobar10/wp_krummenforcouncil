@@ -8,7 +8,7 @@
           </div>
 
           <footer>
-              <p id="footer">Copyright &copy; <?= date('Y'); ?> | Paid for by Krummen for Council</p>
+              <p id="footer">Copyright &copy; <?= date('Y'); ?> | Paid for by Krummen for Council | <a href="privacy-policy" class="privacy-policy">Privacy Policy</a></p>
           </footer>
 
       </main>
