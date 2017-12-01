@@ -13,20 +13,25 @@ get_header(); ?>
           <h2 class="inner-main">Learn About the Issues</h2>
     </section>
 
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
     <section class="issues-wrapper">
          <div class="issues-left">
-             <h2>John's plan for economic growth</h2>
-             <p>John is an independent engineering consultant, working with a variety of companies, including multiple Fortune 500 companies. John’s first job out of college was driving corvettes around the GM Proving Grounds. John has published multiple technical papers on advanced engineering topics, and is a patent-holding engineer. John is also a technical project manager, having installed capital equipment at nuclear facilities.</p>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <h3><?php the_category(); ?></h3>
+             <h2><?php the_title(); ?></h2>
+             <p><?php the_content(); ?></p>
          </div>
+
          <div class="widget-right">
-             <div class="issue-card"><a href="">Economic growth</a></div>
-             <div class="issue-card"><a href="">Reducing city taxes</a></div>
-             <div class="issue-card"><a href="">Preserving small-town spirit</a></div>
-             <div class="issue-card"><a href="">Downtown safety</a></div>
-             <div class="issue-card"><a href="">Downtown development</a></div>
-             <div class="issue-card"><a href="">Children of Naperville</a></div>
+             <div class="issue-card"><a href="issues/economic-growth">Economic growth</a></div>
+             <div class="issue-card"><a href="issues/reducing-city-taxes">Reducing city taxes</a></div>
+             <div class="issue-card"><a href="issue/preserving-small-town-spirit">Preserving small-town spirit</a></div>
+             <div class="issue-card"><a href="issue/downtown-safety">Downtown safety</a></div>
+             <div class="issue-card"><a href="issue/downtown-development">Downtown development</a></div>
+             <div class="issue-card"><a href="issues/children-of-naperville">Children of Naperville</a></div>
+             <?php get_sidebar('issues'); ?>
+             //add an advance loop so that when a new issue is added, a new mini-card is added here.
+
          </div>
 
      </section>
