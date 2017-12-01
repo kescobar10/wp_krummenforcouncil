@@ -1,16 +1,20 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Archives
+*/
+get_header(); ?>
 
 
 	  <section class="inner-main">
+		  <h2 class="inner-header">Archives</h2>
 
 		  <?php if (have_posts()) : ?>
 			  <div>
-				  <h2>Archives</h2>
 				  <?php while (have_posts()) : the_post();?>
 
 			  <time datetime="2017-07-14"><?php echo get_the_date(); ?></time>
 			  <h2><a href="<?php the_permalink(); ?>" class="blog-link"><?php the_title(); ?></a></h2>
-			  <h3 class="category">
+			  <h6 class="category">
 
 				  <?php
 				  $categories = get_the_category();
@@ -30,7 +34,7 @@
 				  }
 
 				  ?>
-			  </h3>
+			  </h6>
 			  <p>John is an independent engineering consultant, working with a variety of companies, including multiple Fortune 500 companies. John’s first job out of college was driving corvettes around the GM Proving Grounds. John has published multiple technical papers on advanced engineering topics, and is a patent-holding engineer. John is also a technical project manager, having installed capital equipment at nuclear facilities.</p>
 			  <button class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></button>
 
