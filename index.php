@@ -7,15 +7,16 @@
 	  </section>
 
 	  <section class="inner-main">
-		  <h2>News & Events</h2>
+
 
 		  <?php if (have_posts()) : ?>
+			  <h2 class="inner-header">Read the latest news</h2>
 			  <div>
 				  <?php while (have_posts()) : the_post();?>
 
 			  <time datetime="2017-07-14"><?php echo get_the_date(); ?></time>
 			  <h2><a href="<?php the_permalink(); ?>" class="blog-link"><?php the_title(); ?></a></h2>
-			  <h3 class="category">
+			  <h5 class="category">
 
 				  <?php
 				  $categories = get_the_category();
@@ -35,7 +36,7 @@
 				  }
 
 				  ?>
-			  </h3>
+			  </h5>
 			  <p><?php the_excerpt(); ?></p>
 			  <button class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></button>
 
