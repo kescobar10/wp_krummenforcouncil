@@ -9,13 +9,14 @@ get_header(); ?>
               <h4><span>John's<span id="naperville">&nbsp;Priorities</span></span></h4>
           </section>
 
-          <section>
-          <h2 class="inner-main">Learn About the Issues</h2>
-    </section>
+          <section class="inner-main">
+              <h2 class="inner-header">Learn about the issues</h2>
+          </section>
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <section class="issues-wrapper">
+        <h2 class="inner-header">Learn about the issues</h2>
          <div class="issues-left">
              <h3><?php the_category(); ?></h3>
              <h2><?php the_title(); ?></h2>
@@ -30,13 +31,13 @@ get_header(); ?>
              <div class="issue-card"><a href="issue/downtown-development">Downtown development</a></div>
              <div class="issue-card"><a href="issues/children-of-naperville">Children of Naperville</a></div>
              <?php get_sidebar('issues'); ?>
-             //add an advance loop so that when a new issue is added, a new mini-card is added here.
+
 
          </div>
 
      </section>
 
-
+<?php endwhile; endif; ?>
           <section>
               <figure id="logo-2">
                   <a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="John Krummen for Council" /></a>
