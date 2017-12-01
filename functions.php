@@ -15,7 +15,7 @@ include (TEMPLATEPATH . '/functions/shortcodes.php' );
 include (TEMPLATEPATH . '/functions/custom-post-types.php' );
 //
 // add_shortcode('contentheading', 'heading_shortcode');
-// 
+//
 // function heading_shortcode($atts, $content = null)
 // {
 //     return '<h3>' . do_shortcode($content) . '</h3>'; // do_shortcode allows for nested Shortcodes
@@ -181,12 +181,12 @@ if (function_exists('register_sidebar'))
     // Define Sidebar Widget Area 1
     register_sidebar(array(
         'name' => __('Sidebar', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
+        'description' => __('Sidebar for the single issues page', 'html5blank'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+        'before_title' => '<h5>',
+        'after_title' => '</h5>'
     ));
 }
 
@@ -411,3 +411,42 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 
 
 // TODO: INCLUDE AH HA CREATIVE BRANDED LOGIN SCREEN
+
+/** Moving comment to bottom
+* Source: http://www.wpbeginner.com/wp-tutorials/how-to-move-comment-text-field-to-bottom-in-wordpress-4-4/
+**/
+
+function wpb_move_comment_field_to_bottom( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+
+/** custom comment walker
+* Source: https://gist.github.com/ahaywood/50d615c7ef1835f9d80957bbd9ce506c
+ **/
+
+function ahha_comments($comment, $args, $depth) {
+         $GLOBALS['comment'] = $comment; ?>
+            <!-- Response -->
+            <div class="comments-response">
+                <div class="response-avatar">
+                    <?php echo get_avatar($comment, '140'); ?>
+                </div>
+                <div class="comm-response-content">
+                    <h5><?php echo get_comment_date('F d, Y'); ?></h5>
+                    <h5><?php echo get_comment_author_link(); ?></h5>
+                    <?php if ($comment->comment_approved == '0') : ?>
+                        <h6><?php _e('Your comment is awaiting moderation.') ?></h6>
+                    <?php endif;
+                    edit_comment_link(__('(Edit)<br />'),' ',''); ?>
+                    <p><?= get_comment_text(); ?></p>
+                </div>
+            </div>
+
+
+      <?php
+ }
