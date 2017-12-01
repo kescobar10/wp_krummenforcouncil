@@ -661,3 +661,12 @@ p#footer {
     float: none;
   }
 }
+
+@media all and (min-width: 687px) {
+  .inner-main {
+    padding: 20px;
+  }
+  .issues-wrapper {
+    padding: 20px;
+  }
+}

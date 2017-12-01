@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: News
+*/
+get_header(); ?>
 
 <section id="inner-banner">
 	<img src="<?php bloginfo('template_url'); ?>/assets/img/signs.jpg" alt="Naperville" />
@@ -8,7 +12,7 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <section class="issues-wrapper">
-	
+
 	<div class="issues-left">
 		<time datetime="2017-07-14">July 14, 2017</time>
 		<h3><?php the_category(); ?></h3>

@@ -7,6 +7,7 @@
 	  </section>
 
 	  <section class="inner-main">
+		  <h2>News & Events</h2>
 
 		  <?php if (have_posts()) : ?>
 			  <div>
@@ -35,7 +36,7 @@
 
 				  ?>
 			  </h3>
-			  <p>John is an independent engineering consultant, working with a variety of companies, including multiple Fortune 500 companies. John’s first job out of college was driving corvettes around the GM Proving Grounds. John has published multiple technical papers on advanced engineering topics, and is a patent-holding engineer. John is also a technical project manager, having installed capital equipment at nuclear facilities.</p>
+			  <p><?php the_excerpt(); ?></p>
 			  <button class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></button>
 
 		  		<?php endwhile; ?>
