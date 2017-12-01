@@ -15,14 +15,14 @@ get_header(); ?>
 
 	<div class="issues-left">
 		<time datetime="2017-07-14">July 14, 2017</time>
-		<h3><?php the_category(); ?></h3>
+		<h5><?php the_category(); ?></h5>
 		<h2><?php the_title(); ?></h2>
 		<p><?php the_content(); ?></p>
 	</div>
 
 	<div class="widget-right">
 		<div class="contact-card">
-			<h3>Newsletter</h3>
+			<h5 class="newsletter">Newsletter</h5>
 			<form>
 				Name:<br>
 				<input type="text" name="fullname"><br>
@@ -38,6 +38,12 @@ get_header(); ?>
 </section>
 <!--- content end --->
 <?php endwhile; endif; ?>
+
+<!-- Comments -->
+<?php ?>
+
+<?php comments_template(); ?>
+
 
 <section>
 	<figure id="logo-2">
