@@ -37,6 +37,7 @@
 
 				  ?>
 			  </h5>
+			  <div class="thumbnail"><?php the_post_thumbnail(); ?><img>
 			  <p><?php the_excerpt(); ?></p>
 			  <button class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></button>
 
@@ -48,6 +49,10 @@
 	  <br>
 	  <h2>No Posts Found</h2>
 	  <?php endif; ?>
+
+	  <div class="pagination">
+	  	<?php html5wp_pagination(); ?>
+	  </div>
 
 	</section>
 
