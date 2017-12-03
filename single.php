@@ -21,18 +21,7 @@ get_header(); ?>
 	</div>
 
 	<div class="widget-right">
-		<div class="contact-card">
-			<h5 class="newsletter">Newsletter</h5>
-			<form>
-				Name:<br>
-				<input type="text" name="fullname"><br>
-				Email:<br>
-				<input type="text" name="fullname"><br>
-				Zip Code:<br>
-				<input type="text" name="fullname"><br>
-				<input class="submit" type="submit" value="Submit">
-			</form>
-		</div>
+		<?php get_sidebar('issues'); ?>
 	</div>
 
 </section>
