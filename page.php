@@ -26,7 +26,7 @@
 
 		<?php else: ?>
 
-			<!-- article -->
+			<!-- article if nothing to display -->
 			<article>
 
 				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
