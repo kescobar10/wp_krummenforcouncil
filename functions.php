@@ -434,16 +434,18 @@ function ahha_comments($comment, $args, $depth) {
             <!-- Response -->
             <div class="comments-response">
                 <div class="response-avatar">
-                    <?php echo get_avatar($comment, '140'); ?>
+                    <?php echo get_avatar($comment, '100'); ?>
                 </div>
                 <div class="comm-response-content">
                     <h5><?php echo get_comment_date('F d, Y'); ?></h5>
                     <h5><?php echo get_comment_author_link(); ?></h5>
                     <?php if ($comment->comment_approved == '0') : ?>
-                        <h6><?php _e('Your comment is awaiting moderation.') ?></h6>
+                        <h5><?php _e('Your comment is awaiting moderation.') ?></h5>
                     <?php endif;
                     edit_comment_link(__('(Edit)<br />'),' ',''); ?>
                     <p><?= get_comment_text(); ?></p>
+                    <div class="reply">
+                        <a href="#">Reply</a>
                 </div>
             </div>
 
