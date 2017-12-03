@@ -17,16 +17,15 @@ comment_form($args); ?>
 
 
 
-	<ul class="comment-box">
+	<div class="comment-box">
 		<?php if (have_comments()) : ?>
 
 			<h2><?php comments_number(); ?></h2>
-		<?php wp_list_comments(array(
-			'avatar_size' => '100',
-		    'type' => 'comment',
-		    'callback' => 'ahha_comments'
-		)); ?>
-	</ul>
+
+			<ul>
+				<?php wp_list_comments('type=comment&callback=html5blankcomments'); ?>
+			</ul>
+	</div>
 
 <?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
