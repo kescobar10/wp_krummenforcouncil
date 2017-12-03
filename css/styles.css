@@ -133,7 +133,7 @@ img.logo-inner {
   font-size: 1.3em;
 }
 
-button.btn-inner {
+button.btn-inner, button.search-submit, .sidebar-contribute-btn {
   background-color: #e3001a;
   height: 60px;
   width: 200px;
@@ -141,6 +141,11 @@ button.btn-inner {
   margin: auto;
   font-family: "Montserrat";
   text-transform: uppercase;
+  color: #fff;
+}
+
+button.search-submit {
+  height: 35px;
 }
 
 button.btn-inner a {
@@ -255,7 +260,7 @@ nav.nav-home-top {
 }
 
 /** Inner pages content **/
-.inner-main, .comments, ul.comment-box {
+.inner-main, .comments, .comment-box {
   max-width: 960px;
   margin: auto;
 }
@@ -293,12 +298,13 @@ ul.post-categories {
   color: #e3001a;
 }
 
-ul.post-ories a {
-  color: #e3001a;
+.post-categories li {
+  display: inline;
+  padding-right: 5px;
 }
 
-h5.newsletter {
-  font-size: 1.2em;
+ul.post-categories a {
+  color: #e3001a;
 }
 
 /** Issues grid **/
@@ -407,7 +413,7 @@ time {
   text-transform: uppercase;
   color: #404040;
   display: block;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .contact-card {
@@ -418,15 +424,19 @@ time {
   padding-left: 15px;
 }
 
-input {
-  height: 35px;
-  margin: 5px 0;
-  width: 90%;
+input.search-input {
+  height: 50px;
+  width: 200px;
+  margin-bottom: 10px;
+  background-color: #fff;
 }
 
 input.submit {
   background-color: #e3001a;
   color: #fff;
+  height: 35px;
+  width: 200px;
+  text-transform: uppercase;
 }
 
 button.read-more {
@@ -444,6 +454,54 @@ button.read-more a {
 
 a.blog-link {
   text-decoration: none;
+  color: #e3001a;
+}
+
+a.view-article {
+  color: #e3001a;
+}
+
+.thumbnail img {
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding: 15px 0;
+}
+
+#recent-posts-2 {
+  background-color: #e3dec0;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#recent-posts-2 a {
+  font-size: 0.9em;
+  color: #e3001a;
+}
+
+#recent-posts-2 h5, #text-2 h5, #search-box h5 {
+  font-size: 1.2em;
+  padding-top: 10px;
+}
+
+#recent-posts-2 li {
+  list-style: none;
+}
+
+.pagination {
+  font-family: 'Montserrat';
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.search-results, .search-results span {
+  font-family: 'Montserrat';
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.pagination a, .search-results a {
   color: #e3001a;
 }
 
@@ -542,7 +600,7 @@ h4 span {
 }
 
 /** Contact form **/
-#contact-form, .comments, ul.comment-box {
+#contact-form, .comments, .comment-box, form.search {
   background-color: #e3dec0;
   margin-top: 50px;
   font-family: 'Montserrat';
@@ -551,6 +609,25 @@ h4 span {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+#contact-form p {
+  line-height: normal;
+  font-weight: 700;
+}
+
+#contact-form input {
+  width: 90%;
+  height: 35px;
+  margin: auto;
+}
+
+input.wpcf7-submit {
+  height: 35px;
+  color: #fff;
+  background-color: #e3001a;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 /** Bottom logo **/
@@ -679,6 +756,35 @@ label {
   padding-bottom: 100px;
 }
 
+.comm-response-content, .comment-body {
+  background-color: #efecda;
+  padding: 30px;
+  margin: 15px 0;
+}
+
+.comments a, .comments-response a, .comment-body a {
+  color: #e3001a;
+}
+
+#author, #email {
+  height: 35px;
+  margin-top: 10px;
+}
+
+.comment-box ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.comment-body {
+  line-height: 1.5;
+}
+
+/** 404 page **/
+#post-404 a {
+  color: #e3001a;
+}
+
 /** Media Queries **/
 @media all and (max-width: 687px) {
   #header-left {
@@ -745,6 +851,9 @@ label {
     display: block;
     margin: auto;
     float: none;
+  }
+  .thumbnail img {
+    width: 80%;
   }
 }
 
