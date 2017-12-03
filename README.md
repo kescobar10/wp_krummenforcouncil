@@ -1,9 +1,9 @@
-# ahha-susy
+# Krummen for Council
 
-Theme broiler plate for rapidly developing your custom WordPress themes.
+WordPress theme created as a class project for Web Interactivity at the University of Florida.
 
-* Project: [github.com/ahaywood/ahha-susy](https://github.com/ahaywood/ahha-susy)
-* Author : [Amy (Haywood) Dutton](http://www.amyhaywood.com) // [@ahaywood](http://twitter.com/ahaywood)
+* Project: [https://github.com/kescobar10/wp_krummenforcouncil](https://github.com/kescobar10/wp_krummenforcouncil)
+* Author : [Kenia Escobar](http://www.krescobar.com) // [@kenia_esc](http://twitter.com/kenia_esc)
 
 This is a fork from Todd Motto's HTML5 Blank theme:
 
@@ -13,46 +13,29 @@ This is a fork from Todd Motto's HTML5 Blank theme:
 * Author : [Todd Motto](http://toddmotto.com) // [@toddmotto](http://twitter.com/toddmotto)
 
 It has been customized to include:
-* My SASS broiler plate structure
-* My default JavaScript file
-* My Gulp broiler plate
-* Includes [PatternLab](http://patternlab.io/)
-* Includes [Susy](http://susydocs.oddbird.net/en/latest/)
-
-## Requirements
-1. Bower
-2. Node.js
-3. Ruby 1.9+
-
-## QuickStart
-
-1. Clone the repo
-2. Run `bower install`
-3. Run `npm install`
-
-## Getting Started
-1. Rename the project name and GitHub directory within **package.json**
-2. Rename the project name within **bower.json**
-3. In **gulpfile.js**, change the local site on lines 124 and 125
-4. Update the WordPress theme information in **styles.css**
-
+* A SASS broiler plate structure
 ---
 
 # File structure
 
+* krummenforcouncil
+  * assets
+  * css
+  * functions
+  * partials
+  * scss
+
 ## The assets folder
+
+The assets folder (assets) containing image (img) and JavaScript (js) folders
 
 ## The functions folder
 
+Contains files for Advanced Custom Fields, custom post types and shortcodes.
+
 ## The partials folder
 
----
-
-# gulpfile.js
-
----
-
-# bower
+Contains files for pagination, loop and a search form
 
 ---
 
@@ -62,4 +45,4 @@ It has been customized to include:
 
 # Sass
 
-## The Scss Linter (.scss-lint.yml)
+The scss file has been compiled into the main stylesheet using Prepros.
