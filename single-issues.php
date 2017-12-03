@@ -16,7 +16,6 @@ get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <section class="issues-wrapper">
-        <h2 class="inner-header">Learn about the issues</h2>
          <div class="issues-left">
              <h3><?php the_category(); ?></h3>
              <h2><?php the_title(); ?></h2>
