@@ -37,12 +37,6 @@ Contains files for Advanced Custom Fields, custom post types and shortcodes.
 
 Contains files for pagination, loop and a search form
 
----
-
-# JavaScript
-
----
-
-# Sass
+## Sass
 
 The scss file has been compiled into the main stylesheet using Prepros.
